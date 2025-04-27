@@ -1,0 +1,15 @@
+import random
+
+secret = random.randint(1, 100)
+tries = 0
+
+while True:
+    guess = int(input("یک عدد حدس بزنید: "))
+    tries += 1
+    if guess < secret:
+        print("برو بالاتر")
+    elif guess > secret:
+        print("بیا پایین‌تر")
+    else:
+        print(f"آفرین! در {tries} تلاش درست حدس زدی")
+        break
